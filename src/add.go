@@ -11,6 +11,7 @@ func handleAddNewSite(w http.ResponseWriter, r *http.Request) {
 
 	if idExists {
 		http.Redirect(w, r, "/add/error", http.StatusSeeOther)
+		return
 	} else {
 		SITE_MAP[tinyID] = params["url"][0]
 		http.Redirect(w, r, "/add/success?id="+tinyID, http.StatusSeeOther)
