@@ -13,6 +13,7 @@ var SITE_MAP = make(map[string]string)
 func main() {
 
 	fmt.Println("Starting server on port : " + PORT)
+	readConfig(&SITE_MAP)
 
 	var mux = http.NewServeMux()
 	mux.HandleFunc("/", Redirect)

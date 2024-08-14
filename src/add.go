@@ -7,9 +7,9 @@ import (
 func handleAddNewSite(w http.ResponseWriter, r *http.Request) {
 	var params = r.URL.Query()
 	var tinyID = params["id"][0]
-	var _, idExists = SITE_MAP[tinyID]
+	var _, doesExists = SITE_MAP[tinyID]
 
-	if idExists {
+	if doesExists {
 		http.Redirect(w, r, "/add/error", http.StatusSeeOther)
 		return
 	} else {

@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-const html = `
+const errorHTML = `
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
@@ -27,5 +27,5 @@ const html = `
 `
 
 func handleError(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, html)
+	fmt.Fprint(w, errorHTML)
 }
