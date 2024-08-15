@@ -20,6 +20,7 @@ func main() {
 	mux.HandleFunc("/add/new", handleAddNewSite)
 	mux.HandleFunc("/add/success", handleSuccess)
 	mux.HandleFunc("/add/error", handleError)
+	mux.HandleFunc("/api", api)
 
 	log.Fatal(http.ListenAndServe(PORT, mux))
 }
