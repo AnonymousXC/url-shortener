@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const PORT = ":3000"
+const PORT = ":8000"
 
 var SITE_MAP = make(map[string]string)
 
